@@ -11,12 +11,13 @@ def free_recall(length=20, wait=1, n=1, WorkingMemory=0, Pause=0):
     all_incorrect_counts = []
 
     for trial in range(n):
-        alphabet = [chr(i) for i in range(ord('A'), ord('Z') + 1)]
+        numbers = [str(i) for i in range(1, 100)]
         # Create the study list (ensure no duplicates for free recall)
-        study_list = random.sample(alphabet, length)
+        correct_answers = random.sample(numbers, length)
+        ###### csv.write(correct_answers + ":")
         
         # Present items one by one
-        for letter in study_list:
+        for letter in correct_answers:
             print("\n" * 25)
             print(letter)
             print("\n" * 10)
@@ -55,10 +56,11 @@ def free_recall(length=20, wait=1, n=1, WorkingMemory=0, Pause=0):
         for item in recalled_items:
             if item not in unique_recalled:
                 unique_recalled.append(item)
+        ####### csv.write(unique_recalled + "\n")
         
         # Calculate correct and incorrect recalls
-        correct_recalls = [item for item in unique_recalled if item in study_list]
-        incorrect_recalls = [item for item in unique_recalled if item not in study_list]
+        correct_recalls = [item for item in unique_recalled if item in correct_answers]
+        incorrect_recalls = [item for item in unique_recalled if item not in correct_answers]
         
         # Update counts
         correct_count = len(correct_recalls)
@@ -68,7 +70,7 @@ def free_recall(length=20, wait=1, n=1, WorkingMemory=0, Pause=0):
         all_incorrect_counts.append(incorrect_count)
         
         # Count correct recalls by serial position
-        for position, item in enumerate(study_list):
+        for position, item in enumerate(correct_answers):
             if item in correct_recalls:
                 counts[position] += 1
         
@@ -116,4 +118,4 @@ def free_recall(length=20, wait=1, n=1, WorkingMemory=0, Pause=0):
     return proportions, counts, all_correct_counts, all_incorrect_counts
 
 # Example usage:
-proportions, counts, correct, incorrect = free_recall(length=10, wait=1, n=1)
+proportions, counts, correct, incorrect = free_recall(length=20, wait=1, n=1)

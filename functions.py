@@ -37,7 +37,7 @@ def serial_recall(length=15, wait=1, n=1, chunking=False):
         time.sleep(1)
         print("You should now enter the sequence:")
         answer = [input("Enter sequence:  ") for letter in sequence]
-        all_user_answers.append(answer.copy())
+        all_user_answers.append(answer.copy().upper())
         # sum_ = 0
         # for i, x in enumerate(zip(answer,serial_recall)):
         #     if x[0] == x[1]:

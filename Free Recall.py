@@ -4,7 +4,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 from inputimeout import inputimeout, TimeoutOccurred
 
-def free_recall(length=20, wait=1, n=1, WorkingMemory=0, Pause=0):
+def free_recall(length=15, wait=1, n=1, WorkingMemory=0, Pause=0):
     proportions = []
     counts = np.zeros(length)
     all_correct_counts = []

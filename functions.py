@@ -17,10 +17,61 @@ def serial_recall(length=15, wait=1, n=1, chunking=False):
     for i in range(n):
 
         if chunking:
-            choices = ['for',  'fra',  'far',  'mor',  'hun',  'han',  'den',  'det', 'har',  'som',  'med',  'dig',  'mig',  'sig',  'var',  'vil',  'kan',  'man',  'ned',  'ind',  'til',  'lys',   'hus',  'mus',  'kat',  'ged',  'gul',  'rød',  'blå',  'her',  'der',  'vor',  'jeg',  'top',  'arm',  'ben',  'øje',  'fod',  'gæs',  'and',  'træ',  'bus',  'bil',  'bog',  'pen',  'dør',  'tag',  'vej','sti',  'sol']
+            choices = [
+                "for",
+                "fra",
+                "far",
+                "mor",
+                "hun",
+                "han",
+                "den",
+                "det",
+                "har",
+                "som",
+                "med",
+                "dig",
+                "mig",
+                "sig",
+                "var",
+                "vil",
+                "kan",
+                "man",
+                "ned",
+                "ind",
+                "til",
+                "lys",
+                "hus",
+                "mus",
+                "kat",
+                "ged",
+                "gul",
+                "rød",
+                "blå",
+                "her",
+                "der",
+                "vor",
+                "jeg",
+                "top",
+                "arm",
+                "ben",
+                "øje",
+                "fod",
+                "gæs",
+                "and",
+                "træ",
+                "bus",
+                "bil",
+                "bog",
+                "pen",
+                "dør",
+                "tag",
+                "vej",
+                "sti",
+                "sol",
+            ]
         else:
-            choices = [chr(i) for i in range(ord('A'), ord('Z') + 1)]
-            
+            choices = [chr(i) for i in range(ord("A"), ord("Z") + 1)]
+
         sequence = [random.choice(choices) for i in range(length)]
         all_correct_answers.append(sequence.copy())
 
@@ -30,9 +81,7 @@ def serial_recall(length=15, wait=1, n=1, chunking=False):
             print("\n" * 10)
             time.sleep(wait)
 
-        print("\n"*50)
-
-
+        print("\n" * 50)
 
         time.sleep(1)
         print("You should now enter the sequence:")
@@ -49,8 +98,13 @@ def serial_recall(length=15, wait=1, n=1, chunking=False):
 
     # plt.plot(range(1, length + 1), counts)
     # plt.show()
-    return np.hstack((np.array([[wait]*n]).T, np.array(all_correct_answers), np.array(all_user_answers)))
-
+    return np.hstack(
+        (
+            np.array([[wait] * n]).T,
+            np.array(all_correct_answers),
+            np.array(all_user_answers),
+        )
+    )
 
 
 def free_recall(length=20, wait=1, n=1, WorkingMemory=False, Pause=0):
@@ -63,6 +117,10 @@ def free_recall(length=20, wait=1, n=1, WorkingMemory=False, Pause=0):
     print("\n" * 50)
     time.sleep(5)
     for trial in range(n):
+        print("\n" * 40)
+        print("\n" * 10)
+        print("LOOK HERE")
+        time.sleep(1)
 
         numbers = [str(i) for i in range(10, 100)]
         # Create the study list (ensure no duplicates for free recall)
@@ -76,16 +134,21 @@ def free_recall(length=20, wait=1, n=1, WorkingMemory=False, Pause=0):
             print("\n" * 10)
             time.sleep(wait)
 
-        print("\n"*50)
+        print("\n" * 50)
 
         if WorkingMemory:
             t_end = time.time() + Pause
             while time.time() < t_end:
                 print(t_end - time.time())
                 try:
-                    inputimeout(f"{random.choice(range(100))} + {random.choice(range(100))} = ", t_end - time.time())
+                    inputimeout(
+                        f"{random.choice(range(100))} + {random.choice(range(100))} = ",
+                        t_end - time.time(),
+                    )
                 except TimeoutOccurred:
-                    print("\n.............................................................")
+                    print(
+                        "\n............................................................."
+                    )
 
         else:
             print(f"Wait for {Pause} seconds")
@@ -94,11 +157,15 @@ def free_recall(length=20, wait=1, n=1, WorkingMemory=False, Pause=0):
         time.sleep(1)
         print("You should now recall as many items as you can (in any order):")
         print(f"Enter up to {length} items. Press Enter twice when finished.")
-        
+
         # Collect free recall responses
         recalled_items = []
         for i in range(length):
-            response = input(f"Enter item {i+1}/{length} (or press Enter to finish early): ").strip().upper()
+            response = (
+                input(f"Enter item {i+1}/{length} (or press Enter to finish early): ")
+                .strip()
+                .upper()
+            )
             if response == "":
                 break
             recalled_items.append(response)
@@ -109,26 +176,26 @@ def free_recall(length=20, wait=1, n=1, WorkingMemory=False, Pause=0):
     #         if item not in unique_recalled:
     #             unique_recalled.append(item)
     #     ####### csv.write(unique_recalled + "\n")
-        
+
     #     # Calculate correct and incorrect recalls
     #     correct_recalls = [item for item in unique_recalled if item in correct_answers]
     #     incorrect_recalls = [item for item in unique_recalled if item not in correct_answers]
-        
+
     #     # Update counts
     #     correct_count = len(correct_recalls)
     #     incorrect_count = len(incorrect_recalls)
-        
+
     #     all_correct_counts.append(correct_count)
     #     all_incorrect_counts.append(incorrect_count)
-        
+
     #     # Count correct recalls by serial position
     #     for position, item in enumerate(correct_answers):
     #         if item in correct_recalls:
     #             counts[position] += 1
-        
+
     #     proportion = correct_count / length
     #     proportions.append(proportion)
-        
+
     #     print(f"\nTrial {trial + 1} Results:")
     #     print(f"Correct: {correct_count}/{length}")
     #     print(f"Incorrect: {incorrect_count}")
@@ -148,50 +215,59 @@ def free_recall(length=20, wait=1, n=1, WorkingMemory=False, Pause=0):
     # plt.ylabel('Proportion Recalled')
     # plt.title('Serial Position Curve')
     # plt.grid(True)
-    
+
     # # Plot overall performance
     # plt.subplot(1, 2, 2)
     # categories = ['Correct', 'Incorrect', 'Missed']
     # values = [avg_correct, avg_incorrect, avg_missed]
     # colors = ['green', 'red', 'orange']
-    
+
     # bars = plt.bar(categories, values, color=colors)
     # plt.ylabel('Average Count')
     # plt.title('Recall Performance Summary')
-    
+
     # # Add value labels on bars
     # for bar, value in zip(bars, values):
-    #     plt.text(bar.get_x() + bar.get_width()/2, bar.get_height() + 0.1, 
+    #     plt.text(bar.get_x() + bar.get_width()/2, bar.get_height() + 0.1,
     #             f'{value:.1f}', ha='center', va='bottom')
 
     # plt.tight_layout()
     # plt.show()
-    
+
     # return proportions, counts, all_correct_counts, all_incorrect_counts
-    return np.hstack(((np.array([[wait]*n]).T, np.array(all_correct_answers), np.array(all_user_answers))))
+    return np.hstack(
+        (
+            (
+                np.array([[wait] * n]).T,
+                np.array(all_correct_answers),
+                np.array(all_user_answers),
+            )
+        )
+    )
+
+
 # Example usage:
 
 
-
-def save_data(matrixx,  data_file_name_input="data.csv"):
-    numOfObs = (matrixx.shape[1]-1)//2
+def save_data(matrixx, data_file_name_input="data.csv"):
+    numOfObs = (matrixx.shape[1] - 1) // 2
     dataDf = pd.DataFrame(
-            matrixx,
-            columns=['wait']+[
-                (
-                    f"Correct_NumberItem{i}"
-                    if i <= numOfObs
-                    else f"Answered_NumberItem{i%numOfObs}"
-                )
-
-                for i in range(1, numOfObs*2+ 1)]
-            
-        )
+        matrixx,
+        columns=["wait"]
+        + [
+            (
+                f"Correct_NumberItem{i}"
+                if i <= numOfObs
+                else f"Answered_NumberItem{i%numOfObs}"
+            )
+            for i in range(1, numOfObs * 2 + 1)
+        ],
+    )
 
     if os.path.isfile(data_file_name_input):
         openDf = pd.read_csv(data_file_name_input)
 
         newDataDf = pd.DataFrame(np.vstack((openDf, dataDf)))
-        newDataDf.to_csv(data_file_name_input, index=False )
+        newDataDf.to_csv(data_file_name_input, index=False)
     else:
         dataDf.to_csv(data_file_name_input, index=False)

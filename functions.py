@@ -116,8 +116,8 @@ def free_recall(length=20, wait=1, n=1, WorkingMemory=False, Pause=0):
     time.sleep(5)
     for trial in range(n):
         print("\n" * 40)
-        print("\n" * 10)
         print("LOOK HERE")
+        print("\n" * 10)
         time.sleep(1)
 
         numbers = [str(i) for i in range(10, 100)]

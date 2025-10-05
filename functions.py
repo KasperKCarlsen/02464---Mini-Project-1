@@ -134,8 +134,8 @@ def free_recall(length=20, wait=1, n=1, workingMemory=False, pause=0):
 
         print("\n" * 50)
 
-        if WorkingMemory:
-            t_end = time.time() + Pause
+        if workingMemory:
+            t_end = time.time() + pause
             while time.time() < t_end:
                 print(t_end - time.time())
                 try:
@@ -149,8 +149,8 @@ def free_recall(length=20, wait=1, n=1, workingMemory=False, pause=0):
                     )
 
         else:
-            print(f"Wait for {Pause} seconds")
-            time.sleep(Pause)
+            print(f"Wait for {pause} seconds")
+            time.sleep(pause)
 
         time.sleep(1)
         print("You should now recall as many items as you can (in any order):")

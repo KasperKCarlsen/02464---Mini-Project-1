@@ -20,6 +20,7 @@ def serial_recall(length=15, wait=1, n=1, chunking=False):
         print("\n" * 40)
         print("LOOK HERE")
         print("\n" * 10)
+        time.sleep(1)
         if chunking:
             choices = [
                 "for",

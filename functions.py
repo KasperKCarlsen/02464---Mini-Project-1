@@ -80,8 +80,9 @@ def serial_recall(length=15, wait=1, n=1, chunking=False):
         sequence = [random.choice(choices) for i in range(length)]
         all_correct_answers.append(sequence.copy())
 
-        for letter in sequence:
+        for idx, letter in enumerate(sequence):
             print("\n" * 25)
+            print(f"idx #: {idx + 1}")
             print(letter)
             print("\n" * 10)
             time.sleep(wait)
@@ -133,8 +134,9 @@ def free_recall(length=20, wait=1, n=1, workingMemory=False, pause=0):
         ###### csv.write(correct_answers + ":")
         all_correct_answers.append(correct_answers.copy())
         # Present items one by one
-        for letter in correct_answers:
+        for idx, letter in enumerate(correct_answers):
             print("\n" * 25)
+            print("index #: ", idx)
             print(letter)
             print("\n" * 10)
             time.sleep(wait)

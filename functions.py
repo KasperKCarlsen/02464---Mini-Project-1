@@ -105,7 +105,7 @@ def serial_recall(length=15, wait=1, n=1, chunking=False):
     )
 
 
-def free_recall(length=20, wait=1, n=1, WorkingMemory=False, Pause=0):
+def free_recall(length=20, wait=1, n=1, workingMemory=False, pause=0):
     # proportions = []
     # counts = np.zeros(length)
     # all_correct_counts = []

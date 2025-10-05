@@ -98,12 +98,10 @@ def serial_recall(length=15, wait=1, n=1, chunking=False):
 
     # plt.plot(range(1, length + 1), counts)
     # plt.show()
-    return np.hstack(
-        (
-            np.array([[wait] * n]).T,
-            np.array(all_correct_answers),
-            np.array(all_user_answers),
-        )
+    return (
+        np.array([wait] * n),
+        np.array(all_correct_answers),
+        np.array(all_user_answers),
     )
 
 
@@ -235,34 +233,24 @@ def free_recall(length=20, wait=1, n=1, WorkingMemory=False, Pause=0):
     # plt.show()
 
     # return proportions, counts, all_correct_counts, all_incorrect_counts
-    return np.hstack(
-        (
-            (
-                np.array([[wait] * n]).T,
-                np.array(all_correct_answers),
-                np.array(all_user_answers),
-            )
-        )
+    return (
+        np.array([wait] * n),
+        np.array(all_correct_answers),
+        np.array(all_user_answers),
     )
 
 
 # Example usage:
 
 
-def save_data(matrixx, data_file_name_input="data.csv"):
-    numOfObs = (matrixx.shape[1] - 1) // 2
+def save_data(waits, corrects, userInputs, data_file_name_input="data.csv"):
+
+    # numOfObs = (matrixx.shape[1] - 1) // 2
+
     dataDf = pd.DataFrame(
-        matrixx,
-        columns=["wait"]
-        + [
-            (
-                f"Correct_NumberItem{i}"
-                if i <= numOfObs
-                else f"Answered_NumberItem{i%numOfObs}"
-            )
-            for i in range(1, numOfObs * 2 + 1)
-        ],
-    )
+        [waits, corrects, userInputs],
+    ).T
+    dataDf.columns = ["wait", "correctSequence", "userInput"]
 
     if os.path.isfile(data_file_name_input):
         openDf = pd.read_csv(data_file_name_input)

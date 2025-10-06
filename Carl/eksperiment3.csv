@@ -1,4 +1,4 @@
-0,1,2
+wait,correctSequence,userInput
 1,['R' 'Z' 'C'],['R' 'Z' 'C']
 1,['R' 'E' 'G'],['R' 'E' 'G']
 1,['M' 'H' 'S'],['M' 'H' 'S']

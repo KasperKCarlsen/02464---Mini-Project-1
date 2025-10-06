@@ -245,7 +245,7 @@ def free_recall(length=20, wait=1, n=1, workingMemory=False, pause=0):
     return (
         np.array([wait] * n),
         np.array(all_correct_answers),
-        np.array(all_user_answers),
+        np.array(all_user_answers, dtype=object),
     )
 
 

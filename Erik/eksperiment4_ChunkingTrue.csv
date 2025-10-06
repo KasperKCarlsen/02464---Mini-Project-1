@@ -1,0 +1,11 @@
+wait,correctSequence,userInput
+1,['der' 'hus' 'med' 'far' 'har' 'der' 'ben' 'mor' 'top' 'hus'],['DER' 'HUS' 'MED' 'FAR' 'HAR' 'DER' 'BEN' 'MOR' 'TOP' 'HUS']
+1,['dig' 'hun' 'jeg' 'til' 'ned' 'fra' 'kan' 'pen' 'sol' 'den'],['DIG' 'HUN' 'MIG' 'TIL' 'FRA' 'NED' 'SOL' 'PEN' 'DEN' '']
+1,['sti' 'kan' 'gul' 'sig' 'ned' 'bus' 'mor' 'hus' 'top' 'mus'],['STI' 'KAN' 'GUL' 'SIG' 'NED' 'BUS' 'MOR' 'HUS' 'MUS' 'S']
+1,['øje' 'det' 'mig' 'gul' 'bog' 'for' 'fra' 'den' 'hun' 'sig'],['ØJE' 'DET' 'GUL' 'MIG' 'BOG' 'FOR' 'FRA' 'DEN' 'HUN' 'SIG']
+1,['bog' 'gul' 'kan' 'top' 'arm' 'gæs' 'kan' 'fra' 'den' 'tag'],['BOG' 'GUL' 'KAN' 'TOP' 'ARM' 'GÆS' 'KAN' 'FRA' 'DEN' 'TAG']
+1,['arm' 'det' 'lys' 'pen' 'ged' 'gæs' 'som' 'der' 'dør' 'bus'],['ARM' 'DEN' 'LYS' 'PEN' 'GED' 'GÆS' 'SOM' 'DER' 'DØR' 'BUS']
+1,['den' 'man' 'mig' 'med' 'lys' 'dør' 'øje' 'mus' 'mig' 'sol'],['DEN' 'MAN' 'MIG' 'DØR' 'ØJE' 'MUS' 'MIG' '' '' '']
+1,['dig' 'træ' 'her' 'far' 'dør' 'hun' 'sti' 'ned' 'dør' 'mus'],['DIG' 'TRÆ' 'HER' 'FAR' 'DØR' 'HUN' 'STI' 'NED' 'DØR' 'MUS']
+1,['ged' 'jeg' 'blå' 'her' 'har' 'vor' 'træ' 'arm' 'for' 'for'],['GED' 'HEG' 'BLÅ' 'HER' 'HAR' 'VOR' 'TRÆ' 'ARM' 'FOR' 'FOR']
+1,['sig' 'kat' 'hun' 'træ' 'vej' 'jeg' 'hus' 'sol' 'bil' 'sig'],['SIG' 'KAT' 'HUN' 'TRÆ' 'VEJ' 'JEG' 'HUS' 'SOL' 'BIL' 'SIG']

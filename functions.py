@@ -264,7 +264,7 @@ def save_data(waits, corrects, userInputs, data_file_name_input="data.csv"):
     if os.path.isfile(data_file_name_input):
         openDf = pd.read_csv(data_file_name_input)
 
-        newDataDf = pd.DataFrame(np.vstack((openDf, dataDf)))
+        newDataDf = pd.concat([openDf, dataDf], ignore_index=True)
         newDataDf.to_csv(data_file_name_input, index=False)
     else:
         dataDf.to_csv(data_file_name_input, index=False)

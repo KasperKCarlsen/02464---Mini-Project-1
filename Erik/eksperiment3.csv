@@ -17,7 +17,7 @@ wait,correctSequence,userInput
 1,['B' 'N' 'J' 'P' 'G' 'U' 'A' 'K'],['P' 'N' 'J' 'B' 'G' 'U' 'A' 'K']
 1,['P' 'U' 'G' 'N' 'D' 'J' 'F' 'A'],['P' 'U' 'G' 'N' 'D' 'J' 'F' 'G']
 1,['B' 'R' 'U' 'H' 'S' 'X' 'V' 'V'],['B' 'R' 'U' 'H' 'S' 'X' 'V' 'V']
-1,['W' 'M' 'W' 'G' 'W' 'Y' 'D' 'P' 'L'],['W' 'MW' 'W' 'G' 'W' 'Y' 'M' 'M' 'M']
+1,['W' 'M' 'W' 'G' 'W' 'Y' 'D' 'P' 'L'],['W' 'M' 'W' 'G' 'W' 'Y' 'M' 'M' 'M']
 1,['G' 'N' 'Z' 'G' 'D' 'M' 'B' 'W' 'B'],['G' 'N' 'Z' 'G' 'D' 'W' 'B' 'N' 'Z']
 1,['Y' 'G' 'S' 'G' 'L' 'J' 'O' 'G' 'G'],['Y' 'G' 'S' 'G' 'L' 'J' 'O' 'G' 'G']
 1,['D' 'E' 'U' 'I' 'F' 'K' 'Z' 'S' 'B' 'O'],['D' 'E' 'U' 'I' 'F' 'G' 'D' 'S' 'B' 'O']

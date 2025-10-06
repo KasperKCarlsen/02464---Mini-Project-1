@@ -5,7 +5,7 @@ wait,correctSequence,userInput
 1,['I' 'Z' 'F' 'J' 'P' 'K' 'D' 'V'],['I' 'Z' 'F' 'J' 'P' 'K' 'K' 'K']
 1,['F' 'Q' 'G' 'H' 'Q' 'I' 'E' 'Y'],['F' 'Q' 'G' 'H' 'G' 'I' 'E' 'Y']
 1,['N' 'F' 'S' 'P' 'D' 'I' 'P' 'V'],['N' 'S' 'F' 'P' 'D' 'K' 'H' 'G']
-1,['R' 'N' 'H' 'B' 'V' 'D' 'R' 'Q'],"['R' 'N' 'H' 'B' 'V' 'D' ""R'"" 'Q']"
+1,['R' 'N' 'H' 'B' 'V' 'D' 'R' 'Q'],['R' 'N' 'H' 'B' 'V' 'D' 'R' 'Q']
 1,['R' 'E' 'R' 'A' 'Z' 'Y' 'E' 'T'],['R' 'E' 'R' 'A' 'Z' 'Y' 'R' 'E']
 1,['T' 'D' 'R' 'L' 'I' 'J' 'V' 'Z'],['T' 'D' 'R' 'L' 'K' 'J' 'H' 'Z']
 1,['S' 'O' 'U' 'L' 'Q' 'W' 'U' 'J'],['S' 'O' 'U' 'L' 'Q' 'W' 'U' 'J']

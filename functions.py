@@ -265,6 +265,37 @@ def save_data(waits, corrects, userInputs, data_file_name_input="data.csv"):
         openDf = pd.read_csv(data_file_name_input)
 
         newDataDf = pd.concat([openDf, dataDf], ignore_index=True)
+        newDataDf.columns = ["wait", "correctSequence", "userInput"]
         newDataDf.to_csv(data_file_name_input, index=False)
     else:
         dataDf.to_csv(data_file_name_input, index=False)
+
+
+def loadDataFrame(path, convertToInt=False):
+
+    df = pd.read_csv(path)
+
+    df["correctSequence"] = df["correctSequence"].apply(
+        lambda x: np.array(
+            x.replace("[", "")
+            .replace("]", "")
+            .replace("'", "")
+            .replace("\n", "")
+            .split(" ")
+        )
+    )
+    df["userInput"] = df["userInput"].apply(
+        lambda x: np.array(
+            x.replace("[", "")
+            .replace("]", "")
+            .replace("'", "")
+            .replace("\n", "")
+            .split(" ")
+        )
+    )
+
+    if convertToInt:
+        df["correctSequence"] = df["correctSequence"].apply(lambda x: x.astype(int))
+        df["userInput"] = df["userInput"].apply(lambda x: x.astype(int))
+
+    return df

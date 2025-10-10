@@ -1,6 +1,6 @@
 wait,correctSequence,userInput
-1,['Q' 'C' 'D' 'Y' 'W' 'F' 'F' 'L'],['Q' 'C' 'F' 'U' '' '' '' 'W']
-1,['Q' 'I' 'W' 'W' 'X' 'L' 'I' 'K'],['Q' 'U' 'I' 'W' '' 'F' '' 'K']
+1,['Q' 'C' 'D' 'Y' 'W' 'F' 'F' 'L'],['Q' 'C' 'F' 'U' 'Ø' 'Ø' 'Ø' 'W']
+1,['Q' 'I' 'W' 'W' 'X' 'L' 'I' 'K'],['Q' 'U' 'I' 'W' 'Ø' 'F' 'Ø' 'K']
 1,['P' 'J' 'E' 'Z' 'P' 'D' 'U' 'X'],['P' 'J' 'E' 'D' 'E' 'D' 'U' 'M']
 1,['M' 'W' 'C' 'E' 'A' 'Q' 'H' 'T'],['M' 'W' 'H' 'T' 'E' 'Q' 'W' 'T']
 1,['E' 'X' 'U' 'L' 'G' 'S' 'U' 'T'],['E' 'X' 'U' 'M' 'G' 'S' 'U' 'T']

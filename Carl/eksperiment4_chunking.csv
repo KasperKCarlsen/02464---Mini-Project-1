@@ -1,0 +1,11 @@
+wait,correctSequence,userInput
+1,['BOG' 'SOM' 'HAN' 'NED' 'HAR' 'TIL' 'AND' 'BOG'],['BOG' 'SOM' 'HAN' 'NED' 'TIL' 'HAR' 'HAN' 'BOG']
+1,['BEN' 'GÆS' 'PEN' 'MED' 'SOL' 'SIG' 'VAR' 'HUS'],['BEN' 'GÆS' 'PEN' 'MED' 'SOL' 'BOG' 'VAR' 'SOL']
+1,['GÆS' 'MUS' 'SOL' 'SIG' 'VOR' 'VAR' 'DER' 'MOR'],['GÆS' 'MOR' 'SOL' 'SIG' 'VAR' 'HAN' 'SOL' 'SOL']
+1,['KAT' 'FOR' 'FOR' 'BIL' 'BIL' 'HER' 'ARM' 'VOR'],['KAT' 'FOR' 'FOR' 'BIL' 'BIL' 'SOL' 'SOL' 'SOL']
+1,['IND' 'TAG' 'LYS' 'HAR' 'VEJ' 'TAG' 'FOD' 'KAN'],['IND' 'TAG' 'LYS' 'HAN' 'KAN' 'VEJ' 'TIL' 'VOR']
+1,['MAN' 'MAN' 'DEN' 'FOD' 'FRA' 'GÆS' 'FOD' 'TIL'],['MAN' 'MAN' 'FOD' 'DER' 'KAN' 'HAN' 'GÆS' 'GÆS']
+1,['IND' 'BLÅ' 'BOG' 'SIG' 'MOR' 'DER' 'DIG' 'KAN'],['IND' 'IND' 'BLÅ' 'BOG' 'SIG' 'DER' 'KAN' 'HAN']
+1,['VIL' 'PEN' 'AND' 'PEN' 'SOL' 'IND' 'SOL' 'ØJE'],['VIL' 'PEN' 'AND' 'PEN' 'SOL' 'VED' 'VED' 'HAN']
+1,['TRÆ' 'SIG' 'HAN' 'MAN' 'TOP' 'DIG' 'JEG' 'TOP'],['TRÆ' 'MAN' 'HAN' 'SIG' 'TOP' 'MAN' 'HAN' 'TOP']
+1,['HAR' 'BUS' 'GED' 'HER' 'IND' 'TIL' 'MIG' 'BUS'],['HAR' 'BUS' 'IND' 'HER' 'TIL' 'MOR' 'SOL' 'SOL']
